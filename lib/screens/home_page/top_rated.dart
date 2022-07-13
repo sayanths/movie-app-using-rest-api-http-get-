@@ -13,10 +13,10 @@ class TopRated extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-          ModifiedText(
+          const ModifiedText(
             text: "Top Rated Movies",
             size: 26,
             color: Colors.white,
@@ -36,6 +36,7 @@ class TopRated extends StatelessWidget {
                               builder: (context) => Description(
                                   name: topRated[index]['title']??'',
                                   overview: topRated[index]['overview'],
+                                   // ignore: prefer_interpolation_to_compose_strings
                                    bannerUrl: 'https://image.tmdb.org/t/p/w500' +
                                       topRated[index]['backdrop_path'],
                                   // ignore: prefer_interpolation_to_compose_strings
@@ -58,6 +59,7 @@ class TopRated extends StatelessWidget {
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: NetworkImage(
+                                      // ignore: prefer_interpolation_to_compose_strings
                                       'https://image.tmdb.org/t/p/w500' +
                                           topRated[index]['backdrop_path'],
                                     ),

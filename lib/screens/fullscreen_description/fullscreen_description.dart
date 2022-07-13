@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netlifx_cross/styles.dart';
 
 class Description extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   final String name, overview, bannerUrl, posterUrl, vote, first_air_date;
   const Description(
       {Key? key,
@@ -10,6 +11,7 @@ class Description extends StatelessWidget {
       required this.bannerUrl,
       required this.posterUrl,
       required this.vote,
+      // ignore: non_constant_identifier_names
       required this.first_air_date})
       : super(key: key);
 
@@ -42,6 +44,7 @@ class Description extends StatelessWidget {
             ),
             const SizedBox(height: 15,),
             Container(padding: const EdgeInsets.all(10),
+            // ignore: prefer_if_null_operators, unnecessary_null_comparison
             child: ModifiedText(text: name!=null? name :'Not Loaded', color: Colors.white, size: 24),),
             Container(
               padding: const EdgeInsets.only(left: 10),

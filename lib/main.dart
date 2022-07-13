@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:netlifx_cross/screens/main_page.dart';
 
 void main() {
-  HttpOverrides.global = MyHttpoverrides();
+ // HttpOverrides.global = MyHttpoverrides();
   runApp(const MyApp());
 }
 
@@ -20,16 +20,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: MainPage(),
+      home: const MainPage(),
     );
   }
 }
 
-class MyHttpoverrides extends HttpOverrides {
-  @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback =
-          (X509Certificate cert, String host, int port) => true;
-  }
-}
+// class MyHttpoverrides extends HttpOverrides {
+//   @override
+//   HttpClient createHttpClient(SecurityContext? context) {
+//     return super.createHttpClient(context)
+//       ..badCertificateCallback =
+//           (X509Certificate cert, String host, int port) => true;
+//   }
+// }

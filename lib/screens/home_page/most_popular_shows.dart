@@ -13,13 +13,11 @@ class PopularShows extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         
-          ModifiedText(
+          const ModifiedText(
             text: "Popular Shows",
             size: 26,
             color: Colors.white,
           ),
-         
           SizedBox(
             height: 300,
             child: ListView.builder(
@@ -32,16 +30,17 @@ class PopularShows extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => Description(
-                                  name: tv[index]['title']??'',
+                                  name: tv[index]['title'] ?? '',
                                   overview: tv[index]['overview'],
-                                   bannerUrl: 'https://image.tmdb.org/t/p/w500' +
+                                  // ignore: prefer_interpolation_to_compose_strings
+                                  bannerUrl: 'https://image.tmdb.org/t/p/w500' +
                                       tv[index]['backdrop_path'],
                                   // ignore: prefer_interpolation_to_compose_strings
                                   posterUrl: 'https://image.tmdb.org/t/p/w500' +
                                       tv[index]['poster_path'],
-                                  vote: tv[index]['vote_average']
-                                      .toString(),
-                                  first_air_date: tv[index]['first_air_date']??'')));
+                                  vote: tv[index]['vote_average'].toString(),
+                                  first_air_date:
+                                      tv[index]['first_air_date'] ?? '')));
                     },
                     child: SizedBox(
                       width: 150,
@@ -55,6 +54,7 @@ class PopularShows extends StatelessWidget {
                                   image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: NetworkImage(
+                                  // ignore: prefer_interpolation_to_compose_strings
                                   'https://image.tmdb.org/t/p/w500' +
                                       tv[index]['backdrop_path'],
                                 ),
@@ -63,7 +63,8 @@ class PopularShows extends StatelessWidget {
                           ),
                           SizedBox(
                             child: ModifiedText(
-                              text: tv[index]['original_name'] ?? 'text loading',
+                              text:
+                                  tv[index]['original_name'] ?? 'text loading',
                               color: Colors.white,
                               size: 16,
                             ),
