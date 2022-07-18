@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:netlifx_cross/screens/comingsoon/coming_soon.dart';
 import 'package:netlifx_cross/screens/downloads/downloads.dart';
 import 'package:netlifx_cross/screens/home_page/home_page.dart';
+import 'package:netlifx_cross/screens/home_page/home_screen.dart';
 
 
 
@@ -16,7 +17,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   final screens = [
-   const HomePage(),
+   const HomeScreen(),
     const ComingSoon(),
       const DownloadPage(),
   

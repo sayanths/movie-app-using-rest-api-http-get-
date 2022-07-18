@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:netlifx_cross/screens/home_page/most_popular_shows.dart';
+
 import 'package:netlifx_cross/screens/home_page/top_rated.dart';
 import 'package:netlifx_cross/screens/home_page/trending_movies.dart';
 import 'package:netlifx_cross/styles.dart';
+import 'package:netlifx_cross/widgets/most_popular_shows.dart';
 import 'package:tmdb_api/tmdb_api.dart';
 
 class HomePage extends StatefulWidget {
